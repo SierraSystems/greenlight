@@ -182,7 +182,7 @@ build() {
   echo -e "\nBuilding bcgov-s2i-caddy image ..."
   docker build -q $(initDockerBuildArgs) \
     -t 'bcgov-s2i-caddy' \
-    'https://github.com/BCDevOps/s2i-caddy.git'
+    'https://github.com/mtpultz/s2i-caddy.git'
 
   echo -e "\nBuilding caddy-runtime image ..."
   docker build -q $(initDockerBuildArgs) \
