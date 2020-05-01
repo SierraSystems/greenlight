@@ -1,6 +1,0 @@
-- name: PST Number
-  version: '1.0.3'
-  attributes:
-    - corp_num
-    # - dba_corp_num
-    - pst_number

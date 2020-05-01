@@ -75,7 +75,7 @@ exit 1
 # Default Settings:
 # -----------------------------------------------------------------------------------------------------------------
 
-DEFAULT_CONTAINERS="agent-wallet-db bcsc-agent agri-agent bcreg-agent ministry-finance-agent city-surrey-agent fraser-valley-agent liquor-control-agent worksafe-agent"
+DEFAULT_CONTAINERS="agent-wallet-db bcsc-agent "
 
 # -----------------------------------------------------------------------------------------------------------------
 # Functions:
@@ -116,20 +116,6 @@ configureEnvironment () {
   export WEB_HTTP_PORT=${WEB_HTTP_PORT:-5000}
   export BCSC_AGENT_HOST=${BCSC_AGENT_HOST:-bcsc-agent}
   export BCSC_AGENT_PORT=${BCSC_AGENT_PORT:-8000}
-  export MINISTRY_AGRICULTURE_AGENT_HOST=${MINISTRY_AGRICULTURE_AGENT_HOST:-agri-agent}
-  export MINISTRY_AGRICULTURE_AGENT_PORT=${MINISTRY_AGRICULTURE_AGENT_PORT:-8000}
-  export BCREG_AGENT_HOST=${BCREG_AGENT_HOST:-bcreg-agent}
-  export BCREG_AGENT_PORT=${BCREG_AGENT_PORT:-8000}
-  export MINISTRY_FINANCE_AGENT_HOST=${MINISTRY_FINANCE_AGENT_HOST:-ministry-finance-agent}
-  export MINISTRY_FINANCE_AGENT_PORT=${MINISTRY_FINANCE_AGENT_PORT:-8000}
-  export CITY_SURREY_AGENT_HOST=${CITY_SURREY_AGENT_HOST:-city-surrey-agent}
-  export CITY_SURREY_AGENT_PORT=${CITY_SURREY_AGENT_PORT:-8000}
-  export FRASER_VALLEY_AGENT_HOST=${FRASER_VALLEY_AGENT_HOST:-fraser-valley-agent}
-  export FRASER_VALLEY_AGENT_PORT=${FRASER_VALLEY_AGENT_PORT:-8000}
-  export LIQUOR_CONTROL_AGENT_HOST=${LIQUOR_CONTROL_AGENT_HOST:-liquor-control-agent}
-  export LIQUOR_CONTROL_AGENT_PORT=${LIQUOR_CONTROL_AGENT_PORT:-8000}
-  export WORKSAFE_AGENT_HOST=${WORKSAFE_AGENT_HOST:-worksafe-agent}
-  export WORKSAFE_AGENT_PORT=${WORKSAFE_AGENT_PORT:-8000}
 
   # wallet-db
   export POSTGRESQL_DATABASE="THE_ORG_BOOK"

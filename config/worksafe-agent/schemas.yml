@@ -1,9 +1,0 @@
-- name: WorkSafe BC Coverage
-  version: '1.0.3'
-  attributes:
-    - corp_num
-    - dba_corp_num
-    - restaurant_name
-    - coverage_description
-    - effective_date
-    - end_date

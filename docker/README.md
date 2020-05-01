@@ -78,10 +78,4 @@ If the user interface does not start, or the `Credentials` drop down does not po
 
 To check whether the issuer services have started browse to the *healthcheck* endpoint of each service.  An **ok** response from the service indicates it is ready.  A full list of the services (and their urls) can be found in the [CaddyFile](https://github.com/bcgov/greenlight/blob/master/caddy/Caddyfile) of the GreenLight application.
 
-[http://localhost:5000/bcreg/health](http://localhost:5000/bcreg/health)
-[http://localhost:5000/finance/health](http://localhost:5000/finance/health)
-[http://localhost:5000/surrey/health](http://localhost:5000/surrey/health)
-[http://localhost:5000/fraser-valley/health](http://localhost:5000/fraser-valley/health)
-[http://localhost:5000/liquor/health](http://localhost:5000/liquor/health)
-[http://localhost:5000/worksafe/health](http://localhost:5000/worksafe/health)
-[http://localhost:5000/agri/health](http://localhost:5000/agri/health)
+[http://localhost:5000/bcsc/health](http://localhost:5000/bcsc/health)

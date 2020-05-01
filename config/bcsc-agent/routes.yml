@@ -1,63 +1,42 @@
-# Documentation: https://github.com/bcgov/von-agent-template/tree/master/von-x-agent/config
-
 forms:
-  bcsc-info:
-
-    # URL for the Web form - becomes <server>/<path> e.g. http://localhost:5000/bcsc/bcsc-info
+  bcsc:
     path: /bcsc/bcsc-info
-
-    # type is always "issue-credential"
     type: issue-credential
-
     schema_name: BCSC Information
-    page_title: BCSC Information
-    title: BCSC Information
-
-    # Templates are defined in von-x-agent/templates
+    page_title: BC Services Card
+    title: BCSC
     template: bcgov.index.html
-
     description: >
-      BCSC.
-    explanation: Use the form below to apply for a Dog and Cat Breeder Licence for your organization.
+      BC Services Card.
+    explanation: Use the form below to register a BC Servies Card User.
 
-    proof_request:
-      id: registration
-      connection_id: bctob
+    js_includes:
+      - src: js/bc_registries.js
 
-    #js_includes:
-    #  - src: js/bc_registries.js
+      fields:
+        - name: userId
+          label: User ID
+          type: text
+          required: true
 
-    # "fields" are displayed on the UI for the user to enter values
-    fields:
-      - name: userId
-        label: User ID
-        type: text
-        required: true
+        - name: hpdid
+          label: HPDID
+          type: text
+          required: true
 
-      - name: hpdid
-        label: HPDID
-        type: text
-        required: true
+        - name: firstName
+          label: First Name
+          type: text
+          required: true
 
-      - name: firstName
-        label: First Name
-        type: text
-        required: true
+        - name: lastName
+          label: Last Name
+          type: text
+          required: true
 
-      - name: lastName
-        label: Last Name
-        type: text
-        required: true
-
-      - name: effective_date
-        label: Effective Date
-        type: date
-        required: true
-
-    # "mapping" identifies attributes that are auto-populated
     mapping:
       attributes:
-
-        - name: effective_date
+        - name: entity_name_effective
           from: helper
           source: now_iso
+

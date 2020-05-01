@@ -14,9 +14,9 @@
           "id": 6,
           "did": "6qnvgJtqwK44D8LFYnV5Yf",
           "name": "BC Corporate Registry",
-          "abbreviation": "BCReg",
-          "email": "bcreg.test.issuer@example.ca",
-          "url": "http://localhost:5000/bcreg/incorporation",
+          "abbreviation": "BCSC",
+          "email": "bcsc.test.issuer@example.ca",
+          "url": "http://localhost:5000/bcsc/bcsc-info",
           "has_logo": false
       }
     }

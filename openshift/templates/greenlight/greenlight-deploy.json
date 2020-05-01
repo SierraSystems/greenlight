@@ -148,60 +148,12 @@
                     "value": "${WEB_BASE_HREF}"
                   },
                   {
-                    "name": "MINISTRY_AGRICULTURE_AGENT_HOST",
-                    "value": "${MINISTRY_AGRICULTURE_AGENT_HOST}"
+                    "name": "BCSC_AGENT_HOST",
+                    "value": "${BCSC_AGENT_HOST}"
                   },
                   {
-                    "name": "MINISTRY_AGRICULTURE_AGENT_PORT",
-                    "value": "${MINISTRY_AGRICULTURE_AGENT_PORT}"
-                  },
-                  {
-                    "name": "BCREG_AGENT_HOST",
-                    "value": "${BCREG_AGENT_HOST}"
-                  },
-                  {
-                    "name": "BCREG_AGENT_PORT",
-                    "value": "${BCREG_AGENT_PORT}"
-                  },
-                  {
-                    "name": "MINISTRY_FINANCE_AGENT_HOST",
-                    "value": "${MINISTRY_FINANCE_AGENT_HOST}"
-                  },
-                  {
-                    "name": "MINISTRY_FINANCE_AGENT_PORT",
-                    "value": "${MINISTRY_FINANCE_AGENT_PORT}"
-                  },
-                  {
-                    "name": "CITY_SURREY_AGENT_HOST",
-                    "value": "${CITY_SURREY_AGENT_HOST}"
-                  },
-                  {
-                    "name": "CITY_SURREY_AGENT_PORT",
-                    "value": "${CITY_SURREY_AGENT_PORT}"
-                  },
-                  {
-                    "name": "FRASER_VALLEY_AGENT_HOST",
-                    "value": "${FRASER_VALLEY_AGENT_HOST}"
-                  },
-                  {
-                    "name": "FRASER_VALLEY_AGENT_PORT",
-                    "value": "${FRASER_VALLEY_AGENT_PORT}"
-                  },
-                  {
-                    "name": "LIQUOR_CONTROL_AGENT_HOST",
-                    "value": "${LIQUOR_CONTROL_AGENT_HOST}"
-                  },
-                  {
-                    "name": "LIQUOR_CONTROL_AGENT_PORT",
-                    "value": "${LIQUOR_CONTROL_AGENT_PORT}"
-                  },
-                  {
-                    "name": "WORKSAFE_AGENT_HOST",
-                    "value": "${WORKSAFE_AGENT_HOST}"
-                  },
-                  {
-                    "name": "WORKSAFE_AGENT_PORT",
-                    "value": "${WORKSAFE_AGENT_PORT}"
+                    "name": "BCSC_AGENT_PORT",
+                    "value": "${BCSC_AGENT_PORT}"
                   }
                 ],
                 "readinessProbe": {
@@ -336,114 +288,16 @@
       "value": "/"
     },
     {
-      "name": "BCSC_HOST",
+      "name": "BCSC_AGENT_HOST",
       "displayName": "Agent Host Name",
       "description": "The name of the BCSC von-x agent associated with this proxy.",
       "required": true,
       "value": "bcsc"
     },
     {
-      "name": "BCSC_PORT",
+      "name": "BCSC_AGENT_PORT",
       "displayName": "Agent Port",
       "description": "The port of the BCSC von-x agent associated with this proxy.",
-      "required": true,
-      "value": "8080"
-    },
-    {
-      "name": "MINISTRY_AGRICULTURE_AGENT_HOST",
-      "displayName": "Agent Host Name",
-      "description": "The name of the Ministry of Agriculture von-x agent associated with this proxy.",
-      "required": true,
-      "value": "ministry-of-agriculture"
-    },
-    {
-      "name": "MINISTRY_AGRICULTURE_AGENT_PORT",
-      "displayName": "Agent Port",
-      "description": "The port of the Ministry of Agriculture von-x agent associated with this proxy.",
-      "required": true,
-      "value": "8080"
-    },
-    {
-      "name": "BCREG_AGENT_HOST",
-      "displayName": "Agent Host Name",
-      "description": "The name of the BC Registries von-x agent associated with this proxy.",
-      "required": true,
-      "value": "bc-registries"
-    },
-    {
-      "name": "BCREG_AGENT_PORT",
-      "displayName": "Agent Port",
-      "description": "The port of the BC Registries von-x agent associated with this proxy.",
-      "required": true,
-      "value": "8080"
-    },
-    {
-      "name": "MINISTRY_FINANCE_AGENT_HOST",
-      "displayName": "Agent Host Name",
-      "description": "The name of the Ministry of Finance von-x agent associated with this proxy.",
-      "required": true,
-      "value": "ministry-of-finance"
-    },
-    {
-      "name": "MINISTRY_FINANCE_AGENT_PORT",
-      "displayName": "Agent Port",
-      "description": "The port of the Ministry of Finance von-x agent associated with this proxy.",
-      "required": true,
-      "value": "8080"
-    },
-    {
-      "name": "CITY_SURREY_AGENT_HOST",
-      "displayName": "Agent Host Name",
-      "description": "The name of the City of Surrey von-x agent associated with this proxy.",
-      "required": true,
-      "value": "city-of-surrey"
-    },
-    {
-      "name": "CITY_SURREY_AGENT_PORT",
-      "displayName": "Agent Port",
-      "description": "The port of the City of Surrey von-x agent associated with this proxy.",
-      "required": true,
-      "value": "8080"
-    },
-    {
-      "name": "FRASER_VALLEY_AGENT_HOST",
-      "displayName": "Agent Host Name",
-      "description": "The name of the Fraser Valley von-x agent associated with this proxy.",
-      "required": true,
-      "value": "fraser-valley-health-authority"
-    },
-    {
-      "name": "FRASER_VALLEY_AGENT_PORT",
-      "displayName": "Agent Port",
-      "description": "The port of the Fraser Valley von-x agent associated with this proxy.",
-      "required": true,
-      "value": "8080"
-    },
-    {
-      "name": "LIQUOR_CONTROL_AGENT_HOST",
-      "displayName": "Agent Host Name",
-      "description": "The name of the Liquor Control and Licensing Branch von-x agent associated with this proxy.",
-      "required": true,
-      "value": "liquor-control-and-licensing-branch"
-    },
-    {
-      "name": "LIQUOR_CONTROL_AGENT_PORT",
-      "displayName": "Agent Port",
-      "description": "The port of the Liquor Control and Licensing Branch von-x agent associated with this proxy.",
-      "required": true,
-      "value": "8080"
-    },
-    {
-      "name": "WORKSAFE_AGENT_HOST",
-      "displayName": "Agent Host Name",
-      "description": "The name of the Worksafe BC von-x agent associated with this proxy.",
-      "required": true,
-      "value": "worksafe-bc"
-    },
-    {
-      "name": "WORKSAFE_AGENT_PORT",
-      "displayName": "Agent Port",
-      "description": "The port of the Worksafe BC von-x agent associated with this proxy.",
       "required": true,
       "value": "8080"
     },

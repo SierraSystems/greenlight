@@ -1,9 +1,0 @@
-- name: Liquor License
-  version: '1.0.3'
-  attributes:
-    - corp_num
-    - dba_corp_num
-    - dancing_permitted
-    - patio
-    - effective_date
-    - end_date
