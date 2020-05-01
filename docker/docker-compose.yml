@@ -26,6 +26,7 @@ services:
       WORKSAFE_AGENT_HOST: ${WORKSAFE_AGENT_HOST}
       WORKSAFE_AGENT_PORT: ${WORKSAFE_AGENT_PORT}
     depends_on:
+      - bcsc-agent
       - agri-agent
       - bcreg-agent
       - ministry-finance-agent
@@ -87,6 +88,7 @@ services:
       WORKSAFE_AGENT_HOST: ${WORKSAFE_AGENT_HOST}
       WORKSAFE_AGENT_PORT: ${WORKSAFE_AGENT_PORT}
     depends_on:
+      - bcsc-agent
       - agri-agent
       - bcreg-agent
       - ministry-finance-agent
@@ -105,6 +107,37 @@ services:
       - caddy-logs:/srv/logs
     command:
       '/tmp/scripts/run'
+
+  bcsc-agent:
+    build:
+      context: ..
+      dockerfile: docker/agent/Dockerfile
+    environment:
+      DOCKERHOST: ${DOCKERHOST}
+      APPLICATION_URL: ${APPLICATION_URL:-http://localhost:5000}
+      ENDPOINT_URL: ${ENDPOINT_URL:-http://localhost:5000}
+      CONFIG_ROOT: ../config/bcsc-agent
+      ENVIRONMENT: ${ENVIRONMENT:-default}
+      INDY_LEDGER_URL: ${LEDGER_URL:-http://localhost:9000}
+      LOG_LEVEL: ${LOG_LEVEL}
+      PYTHON_ENV: ${PYTHON_ENV:-development}
+      TOB_API_URL: ${TOB_API_URL}
+      TOB_APP_URL: ${TOB_APP_URL}
+      POSTGRESQL_WALLET_HOST: ${POSTGRESQL_WALLET_HOST}
+      POSTGRESQL_WALLET_PORT: ${POSTGRESQL_WALLET_PORT}
+      POSTGRESQL_WALLET_USER: ${POSTGRESQL_USER}
+      POSTGRESQL_WALLET_PASSWORD: ${POSTGRESQL_PASSWORD}
+      POSTGRESQL_WALLET_ADMIN_PASSWORD: ${POSTGRESQL_ADMIN_PASSWORD}
+      WALLET_ENCRYPTION_KEY: ${WALLET_ENCRYPTION_KEY}
+      INDY_WALLET_TYPE: ${INDY_WALLET_TYPE}
+      INDY_WALLET_SEED: ${BCSC_WALLET_SEED}
+    networks:
+      - orgbook
+      - vonx
+    depends_on:
+      - agent-wallet-db
+    volumes:
+      - bcsc-agent-wallet:/home/indy/.indy_client/wallet
 
   agri-agent:
     build:
@@ -341,6 +374,7 @@ services:
 volumes:
   caddy-data:
   caddy-logs:
+  bcsc-agent-wallet:
   agri-agent-wallet:
   bcreg-agent-wallet:
   ministry-finance-agent-wallet:

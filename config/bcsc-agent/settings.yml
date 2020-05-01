@@ -1,0 +1,5 @@
+default:
+  TEMPLATE_PATH: ../templates
+  TOB_API_URL: http://tob-api:8080/api/v2
+  TOB_APP_URL: http://localhost:8080
+  INDY_WALLET_SEED: bcsc_000000000000000000000000000
