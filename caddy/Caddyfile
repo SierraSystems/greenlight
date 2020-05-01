@@ -28,6 +28,7 @@
         without /bc-tob
     }
 
+
     proxy /bcsc/health {%BCSC_AGENT_HOST%}:{%BCSC_AGENT_PORT%} {
         without /bcsc
     }

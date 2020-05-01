@@ -3,12 +3,7 @@ const PROXY_CONFIG = [
       context: [
           "/bc-tob",
           "/bcsc",
-          "/finance",
-          "/fraser-valley",
-          "/liquor",
-          "/surrey",
-          "/worksafe",
-          "/topic"
+          "/finance"
       ],
       target: "http://proxy-dev:8080",
       secure: false,
