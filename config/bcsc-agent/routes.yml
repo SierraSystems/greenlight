@@ -1,5 +1,5 @@
 forms:
-  bcsc:
+  bcsc-info:
     path: /bcsc/bcsc-info
     type: issue-credential
     schema_name: BCSC Information
@@ -10,29 +10,26 @@ forms:
       BC Services Card.
     explanation: Use the form below to register a BC Servies Card User.
 
-    js_includes:
-      - src: js/bc_registries.js
+    fields:
+      - name: userId
+        label: User ID
+        type: text
+        required: true
 
-      fields:
-        - name: userId
-          label: User ID
-          type: text
-          required: true
+      - name: hpdid
+        label: HPDID
+        type: text
+        required: true
 
-        - name: hpdid
-          label: HPDID
-          type: text
-          required: true
+      - name: firstName
+        label: First Name
+        type: text
+        required: true
 
-        - name: firstName
-          label: First Name
-          type: text
-          required: true
-
-        - name: lastName
-          label: Last Name
-          type: text
-          required: true
+      - name: lastName
+        label: Last Name
+        type: text
+        required: true
 
     mapping:
       attributes:
