@@ -50,14 +50,27 @@ issuers:
                 from: value
           - model: attribute
             fields:
+              text:
+                input: lastName
+                from: claim
               type:
-                input: entity_name_effective
+                input: lastName
                 from: value
-              format:
-                input: datetime
+          - model: attribute
+            fields:
+              type:
+                input: hpdid
                 from: value
               value:
-                input: entity_name_effective
+                input: hpdid
+                from: claim
+          - model: attribute
+            fields:
+              type:
+                input: userId
+                from: value
+              value:
+                input: userId
                 from: claim
 
 
