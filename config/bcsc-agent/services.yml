@@ -43,18 +43,18 @@ issuers:
           - model: name
             fields:
               text:
-                input: firstName
+                input: first_name
                 from: claim
               type:
-                input: firstName
+                input: first_name
                 from: value
           - model: attribute
             fields:
               text:
-                input: lastName
+                input: last_name
                 from: claim
               type:
-                input: lastName
+                input: last_name
                 from: value
           - model: attribute
             fields:
@@ -67,10 +67,10 @@ issuers:
           - model: attribute
             fields:
               type:
-                input: userId
+                input: user_id
                 from: value
               value:
-                input: userId
+                input: user_id
                 from: claim
 
 
