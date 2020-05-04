@@ -352,6 +352,20 @@
       "value": "/"
     },
     {
+      "name": "BCSC_HOST",
+      "displayName": "Agent Host Name",
+      "description": "The name of the BC Services Card von-x agent associated with this proxy.",
+      "required": true,
+      "value": "bcsc"
+    },
+    {
+      "name": "BCSC_PORT",
+      "displayName": "Agent Port",
+      "description": "The port of the BC Services Card von-x agent associated with this proxy.",
+      "required": true,
+      "value": "8080"
+    },
+    {
       "name": "MINISTRY_AGRICULTURE_AGENT_HOST",
       "displayName": "Agent Host Name",
       "description": "The name of the Ministry of Agriculture von-x agent associated with this proxy.",
@@ -460,6 +474,20 @@
       "name": "CPBC_AGENT_PORT",
       "displayName": "Agent Port",
       "description": "The port of the College of Pharmacists of BC von-x agent associated with this proxy.",
+      "required": true,
+      "value": "8080"
+    },
+    {
+      "name": "GPID_AGENT_HOST",
+      "displayName": "Agent Host Name",
+      "description": "The name of the General Pratitioner ID von-x agent associated with this proxy.",
+      "required": true,
+      "value": "GPID"
+    },
+    {
+      "name": "GPID_AGENT_PORT",
+      "displayName": "Agent Port",
+      "description": "The port of the General Pratitioner ID von-x agent associated with this proxy.",
       "required": true,
       "value": "8080"
     },
