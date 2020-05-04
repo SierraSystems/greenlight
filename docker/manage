@@ -75,7 +75,7 @@ exit 1
 # Default Settings:
 # -----------------------------------------------------------------------------------------------------------------
 
-DEFAULT_CONTAINERS="agent-wallet-db agri-agent bcreg-agent ministry-finance-agent city-surrey-agent fraser-valley-agent liquor-control-agent worksafe-agent"
+DEFAULT_CONTAINERS="agent-wallet-db agri-agent bcreg-agent ministry-finance-agent city-surrey-agent fraser-valley-agent liquor-control-agent worksafe-agent cpbc-agent"
 
 # -----------------------------------------------------------------------------------------------------------------
 # Functions:
@@ -128,6 +128,8 @@ configureEnvironment () {
   export LIQUOR_CONTROL_AGENT_PORT=${LIQUOR_CONTROL_AGENT_PORT:-8000}
   export WORKSAFE_AGENT_HOST=${WORKSAFE_AGENT_HOST:-worksafe-agent}
   export WORKSAFE_AGENT_PORT=${WORKSAFE_AGENT_PORT:-8000}
+  export CPBC_AGENT_HOST=${CPBC_AGENT_HOST:-cpbc-agent}
+  export CPBC_AGENT_PORT=${CPBC_AGENT_PORT:-8000}
 
   # wallet-db
   export POSTGRESQL_DATABASE="THE_ORG_BOOK"
