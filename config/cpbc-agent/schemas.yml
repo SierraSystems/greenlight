@@ -11,13 +11,14 @@
   version: '1.0.1'
   # Used in VON, but not passed to Hyperledger Indy schema
   attributes:
+    - hpdid
     # - college_licence
     # TODO assume inclusion with licence_num
     # - college_num
     - licence_num
     - licence_class
     # TODO what fields should be included?
-    - legal_name
+    # - legal_name
     # - first_name
     # - last_name
     # - address

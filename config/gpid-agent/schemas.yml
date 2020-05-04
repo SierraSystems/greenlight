@@ -9,6 +9,7 @@
 - name: General Practitioner ID
   version: '1.0.1'
   attributes:
+    - hpdid
     - gpid
     # TODO what attributes should be included?
     # - legal_name
