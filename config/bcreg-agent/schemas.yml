@@ -1,0 +1,29 @@
+- name: Registered Corporation
+  version: '1.0.3'
+  attributes:
+    - corp_num
+    - registration_date
+    - entity_type
+    - entity_status
+    - entity_status_effective
+    - entity_name_effective
+    - address_line_1
+    - address_line_2
+    - addressee
+    - city
+    - country
+    - legal_name
+    - postal_code
+    - province
+
+- name: Business Relationship
+  version: '1.0.3'
+  attributes:
+    - corp_num
+    - dba_corp_num
+    - relationship
+    - relationship_description
+    - relationship_status
+    - relationship_status_effective
+    - effective_date
+    - reason_description
