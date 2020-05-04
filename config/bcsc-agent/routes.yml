@@ -7,11 +7,11 @@ forms:
     title: BCSC
     template: bcgov.index.html
     description: >
-      BC Services Card.
-    explanation: Use the form below to register a BC Servies Card User.
+      The BC Services Card provides access to government services. It replaces the CareCard for access to health care services.
+    explanation: Use the form below to register a BC Services Card.
 
     fields:
-      - name: userId
+      - name: user_id
         label: User ID
         type: text
         required: true
@@ -21,12 +21,12 @@ forms:
         type: text
         required: true
 
-      - name: firstName
+      - name: first_name
         label: First Name
         type: text
         required: true
 
-      - name: lastName
+      - name: last_name
         label: Last Name
         type: text
         required: true

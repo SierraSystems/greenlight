@@ -54,10 +54,10 @@ forms:
       #   type: text
       #   required: true
 
-      - name: address
-        label: Mailing Address
-        type: address
-        required: true
+      # - name: address
+      #   label: Mailing Address
+      #   type: address
+      #   required: true
 
       # - name: renewal_date
       #   label: Renewal Date

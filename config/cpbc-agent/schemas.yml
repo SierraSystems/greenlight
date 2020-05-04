@@ -20,7 +20,7 @@
     - legal_name
     # - first_name
     # - last_name
-    - address
+    # - address
     # TODO omitted for simplicity
     # - registration_date
     # TODO should there even be renewal date?
