@@ -11,32 +11,32 @@ services:
       WEB_HOST_NAME: ${WEB_HOST_NAME}
       WEB_HOST_PORT: ${WEB_HOST_PORT}
       WEB_HOST_TLS: ${WEB_HOST_TLS}
-      MINISTRY_AGRICULTURE_AGENT_HOST: ${MINISTRY_AGRICULTURE_AGENT_HOST}
-      MINISTRY_AGRICULTURE_AGENT_PORT: ${MINISTRY_AGRICULTURE_AGENT_PORT}
+      # MINISTRY_AGRICULTURE_AGENT_HOST: ${MINISTRY_AGRICULTURE_AGENT_HOST}
+      # MINISTRY_AGRICULTURE_AGENT_PORT: ${MINISTRY_AGRICULTURE_AGENT_PORT}
       BCSC_AGENT_HOST: ${BCSC_AGENT_HOST}
       BCSC_AGENT_PORT: ${BCSC_AGENT_PORT}
-      MINISTRY_FINANCE_AGENT_HOST: ${MINISTRY_FINANCE_AGENT_HOST}
-      MINISTRY_FINANCE_AGENT_PORT: ${MINISTRY_FINANCE_AGENT_PORT}
-      CITY_SURREY_AGENT_HOST: ${CITY_SURREY_AGENT_HOST}
-      CITY_SURREY_AGENT_PORT: ${CITY_SURREY_AGENT_PORT}
-      FRASER_VALLEY_AGENT_HOST: ${FRASER_VALLEY_AGENT_HOST}
-      FRASER_VALLEY_AGENT_PORT: ${FRASER_VALLEY_AGENT_PORT}
-      LIQUOR_CONTROL_AGENT_HOST: ${LIQUOR_CONTROL_AGENT_HOST}
-      LIQUOR_CONTROL_AGENT_PORT: ${LIQUOR_CONTROL_AGENT_PORT}
-      WORKSAFE_AGENT_HOST: ${WORKSAFE_AGENT_HOST}
-      WORKSAFE_AGENT_PORT: ${WORKSAFE_AGENT_PORT}
+      # MINISTRY_FINANCE_AGENT_HOST: ${MINISTRY_FINANCE_AGENT_HOST}
+      # MINISTRY_FINANCE_AGENT_PORT: ${MINISTRY_FINANCE_AGENT_PORT}
+      # CITY_SURREY_AGENT_HOST: ${CITY_SURREY_AGENT_HOST}
+      # CITY_SURREY_AGENT_PORT: ${CITY_SURREY_AGENT_PORT}
+      # FRASER_VALLEY_AGENT_HOST: ${FRASER_VALLEY_AGENT_HOST}
+      # FRASER_VALLEY_AGENT_PORT: ${FRASER_VALLEY_AGENT_PORT}
+      # LIQUOR_CONTROL_AGENT_HOST: ${LIQUOR_CONTROL_AGENT_HOST}
+      # LIQUOR_CONTROL_AGENT_PORT: ${LIQUOR_CONTROL_AGENT_PORT}
+      # WORKSAFE_AGENT_HOST: ${WORKSAFE_AGENT_HOST}
+      # WORKSAFE_AGENT_PORT: ${WORKSAFE_AGENT_PORT}
       CPBC_AGENT_HOST: ${CPBC_AGENT_HOST}
       CPBC_AGENT_PORT: ${CPBC_AGENT_PORT}
       GPID_AGENT_HOST: ${GPID_AGENT_HOST}
       GPID_AGENT_PORT: ${GPID_AGENT_PORT}
     depends_on:
-      - agri-agent
+      # - agri-agent
       - bcsc-agent
-      - ministry-finance-agent
-      - city-surrey-agent
-      - fraser-valley-agent
-      - liquor-control-agent
-      - worksafe-agent
+      # - ministry-finance-agent
+      # - city-surrey-agent
+      # - fraser-valley-agent
+      # - liquor-control-agent
+      # - worksafe-agent
       - cpbc-agent
       - gpid-agent
     networks:
@@ -78,32 +78,32 @@ services:
       WEB_HOST_NAME: ${WEB_HOST_NAME}
       WEB_HOST_PORT: ${WEB_HOST_PORT}
       WEB_HOST_TLS: ${WEB_HOST_TLS}
-      MINISTRY_AGRICULTURE_AGENT_HOST: ${MINISTRY_AGRICULTURE_AGENT_HOST}
-      MINISTRY_AGRICULTURE_AGENT_PORT: ${MINISTRY_AGRICULTURE_AGENT_PORT}
+      # MINISTRY_AGRICULTURE_AGENT_HOST: ${MINISTRY_AGRICULTURE_AGENT_HOST}
+      # MINISTRY_AGRICULTURE_AGENT_PORT: ${MINISTRY_AGRICULTURE_AGENT_PORT}
       BCSC_AGENT_HOST: ${BCSC_AGENT_HOST}
       BCSC_AGENT_PORT: ${BCSC_AGENT_PORT}
-      MINISTRY_FINANCE_AGENT_HOST: ${MINISTRY_FINANCE_AGENT_HOST}
-      MINISTRY_FINANCE_AGENT_PORT: ${MINISTRY_FINANCE_AGENT_PORT}
-      CITY_SURREY_AGENT_HOST: ${CITY_SURREY_AGENT_HOST}
-      CITY_SURREY_AGENT_PORT: ${CITY_SURREY_AGENT_PORT}
-      FRASER_VALLEY_AGENT_HOST: ${FRASER_VALLEY_AGENT_HOST}
-      FRASER_VALLEY_AGENT_PORT: ${FRASER_VALLEY_AGENT_PORT}
-      LIQUOR_CONTROL_AGENT_HOST: ${LIQUOR_CONTROL_AGENT_HOST}
-      LIQUOR_CONTROL_AGENT_PORT: ${LIQUOR_CONTROL_AGENT_PORT}
-      WORKSAFE_AGENT_HOST: ${WORKSAFE_AGENT_HOST}
-      WORKSAFE_AGENT_PORT: ${WORKSAFE_AGENT_PORT}
+      # MINISTRY_FINANCE_AGENT_HOST: ${MINISTRY_FINANCE_AGENT_HOST}
+      # MINISTRY_FINANCE_AGENT_PORT: ${MINISTRY_FINANCE_AGENT_PORT}
+      # CITY_SURREY_AGENT_HOST: ${CITY_SURREY_AGENT_HOST}
+      # CITY_SURREY_AGENT_PORT: ${CITY_SURREY_AGENT_PORT}
+      # FRASER_VALLEY_AGENT_HOST: ${FRASER_VALLEY_AGENT_HOST}
+      # FRASER_VALLEY_AGENT_PORT: ${FRASER_VALLEY_AGENT_PORT}
+      # LIQUOR_CONTROL_AGENT_HOST: ${LIQUOR_CONTROL_AGENT_HOST}
+      # LIQUOR_CONTROL_AGENT_PORT: ${LIQUOR_CONTROL_AGENT_PORT}
+      # WORKSAFE_AGENT_HOST: ${WORKSAFE_AGENT_HOST}
+      # WORKSAFE_AGENT_PORT: ${WORKSAFE_AGENT_PORT}
       CPBC_AGENT_HOST: ${CPBC_AGENT_HOST}
       CPBC_AGENT_PORT: ${CPBC_AGENT_PORT}
       GPID_AGENT_HOST: ${GPID_AGENT_HOST}
       GPID_AGENT_PORT: ${GPID_AGENT_PORT}
     depends_on:
-      - agri-agent
+      # - agri-agent
       - bcsc-agent
-      - ministry-finance-agent
-      - city-surrey-agent
-      - fraser-valley-agent
-      - liquor-control-agent
-      - worksafe-agent
+      # - ministry-finance-agent
+      # - city-surrey-agent
+      # - fraser-valley-agent
+      # - liquor-control-agent
+      # - worksafe-agent
       - cpbc-agent
       - gpid-agent
     networks:
@@ -414,13 +414,13 @@ services:
 volumes:
   caddy-data:
   caddy-logs:
-  agri-agent-wallet:
+  # agri-agent-wallet:
   bcsc-agent-wallet:
-  ministry-finance-agent-wallet:
-  city-surrey-agent-wallet:
-  fraser-valley-agent-wallet:
-  liquor-control-agent-wallet:
-  worksafe-agent-wallet:
+  # ministry-finance-agent-wallet:
+  # city-surrey-agent-wallet:
+  # fraser-valley-agent-wallet:
+  # liquor-control-agent-wallet:
+  # worksafe-agent-wallet:
   cpbc-agent-wallet:
   gpid-agent-wallet:
   agent-wallet-db:

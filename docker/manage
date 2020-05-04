@@ -75,7 +75,8 @@ exit 1
 # Default Settings:
 # -----------------------------------------------------------------------------------------------------------------
 
-DEFAULT_CONTAINERS="agent-wallet-db agri-agent bcsc-agent ministry-finance-agent city-surrey-agent fraser-valley-agent liquor-control-agent worksafe-agent cpbc-agent gpid-agent"
+# DEFAULT_CONTAINERS="agent-wallet-db agri-agent bcsc-agent ministry-finance-agent city-surrey-agent fraser-valley-agent liquor-control-agent worksafe-agent cpbc-agent gpid-agent"
+DEFAULT_CONTAINERS="agent-wallet-db bcsc-agent cpbc-agent gpid-agent"
 
 # -----------------------------------------------------------------------------------------------------------------
 # Functions:
