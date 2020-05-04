@@ -104,7 +104,7 @@ initialize
 # Ask the user to supply the sensitive parameters ...
 readParameter "WALLET_ENCRYPTION_KEY - Please provide the wallet encryption key for the environment.  If left blank, a 48 character long base64 encoded value will be randomly generated using openssl:" WALLET_ENCRYPTION_KEY $(generateKey) "true"
 
-_walletPrefix="BCREG"
+_walletPrefix="CPBC"
 readParameter "INDY_WALLET_SEED - Please provide the indy wallet seed for the environment.  If left blank, a seed will be randomly generated using openssl:" INDY_WALLET_SEED $(generateSeed ${_walletPrefix}) "true"
 readParameter "INDY_WALLET_DID - Please provide the indy wallet did for the environment.  The default is an empty string:" INDY_WALLET_DID "" "true"
 

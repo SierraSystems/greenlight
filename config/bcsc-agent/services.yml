@@ -1,0 +1,78 @@
+issuers:
+  bcsc:
+    logo_path: ''
+    name: BC Services Card
+    abbreviation: BCSC
+    email: bcsc.test.issuer@example.ca
+    url: https://www2.gov.bc.ca/gov/content/governments/government-id/bc-services-card
+    endpoint: ${ENDPOINT_URL}/bcsc
+
+    connection:
+      type: TheOrgBook
+      api_url: $TOB_API_URL
+      sign_target: false
+
+    wallet:
+      name: ${POSTGRESQL_WALLET_NAME:-bcsc_issuer}
+      seed: $INDY_WALLET_SEED
+      type: $INDY_WALLET_TYPE
+      params:
+        storage_config:
+          url: "$POSTGRESQL_WALLET_HOST:$POSTGRESQL_WALLET_PORT"
+      access_creds:
+        key: $WALLET_ENCRYPTION_KEY
+        storage_credentials:
+          account: $POSTGRESQL_WALLET_USER
+          password: $POSTGRESQL_WALLET_PASSWORD
+          admin_account: ${POSTGRESQL_WALLET_ADMIN_USER:-postgres}
+          admin_password: $POSTGRESQL_WALLET_ADMIN_PASSWORD
+        key_derivation_method: ARGON2I_MOD
+
+    credential_types:
+      - description: BCSC
+        schema: BCSC Information
+        issuer_url: $APPLICATION_URL/bcsc/bcsc-info
+        topic:
+          source_id:
+            input: hpdid
+            from: claim
+          type:
+            input: registration
+            from: value
+        mapping:
+          - model: name
+            fields:
+              text:
+                input: firstName
+                from: claim
+              type:
+                input: firstName
+                from: value
+          - model: attribute
+            fields:
+              text:
+                input: lastName
+                from: claim
+              type:
+                input: lastName
+                from: value
+          - model: attribute
+            fields:
+              type:
+                input: hpdid
+                from: value
+              value:
+                input: hpdid
+                from: claim
+          - model: attribute
+            fields:
+              type:
+                input: userId
+                from: value
+              value:
+                input: userId
+                from: claim
+
+
+
+

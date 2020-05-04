@@ -35,7 +35,7 @@
       "id": 4,
       "create_timestamp": "2018-11-29T10:40:16.437333-08:00",
       "update_timestamp": "2018-11-29T10:40:16.442444-08:00",
-      "name": "registration.greenlight",
+      "name": "bcsc.greenlight",
       "version": "1.0.0",
       "origin_did": "6qnvgJtqwK44D8LFYnV5Yf"
     },
@@ -62,6 +62,14 @@
       "name": "biz_license.greenlight",
       "version": "1.0.0",
       "origin_did": "A9Rsuu7FNquw8Ne2Smu5Nr"
+    },
+    {
+      "id": 8,
+      "create_timestamp": "2020-04-03T10:40:34.050700-08:00",
+      "update_timestamp": "2020-04-03T10:40:34.053745-08:00",
+      "name": "cpbc.greenlight",
+      "version": "1.0.0",
+      "origin_did": "A9Rsuu7FNquw8Nf2Smu5Nr"
     }
   ]
 }

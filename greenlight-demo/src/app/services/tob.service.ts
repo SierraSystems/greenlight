@@ -26,7 +26,7 @@ export class TobService {
 
     // This is required to address limitations with how the agent endpoints are published in Docker
     // if (/^http(s?):\/\/localhost/.test(window.location.href)) {
-      reqURL = `bcreg/get-credential-dependencies?schema_name=${name}&schema_version=${version}&origin_did=${did}`;
+      reqURL = `bcsc/get-credential-dependencies?schema_name=${name}&schema_version=${version}&origin_did=${did}`;
     // } else {
     //   reqURL = `${endpoint}/get-credential-dependencies?schema_name=${name}&schema_version=${version}&origin_did=${did}`;
     // }

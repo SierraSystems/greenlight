@@ -1,0 +1,29 @@
+# schemas.yml holds the schema attributes for the set of credentials
+# to be issued by the agent. Based on this information, the agent
+# can, on startup, look up on, and if necessary, publish to, the
+# ledger the schema and credential definitions for the credentials
+# to be issued by the agent.
+#
+# @see https://github.com/bcgov/von-agent-template/tree/master/von-x-agent/config
+
+# Issued Credential #1
+- name: Registered Pharmacist
+  version: '1.0.1'
+  # Used in VON, but not passed to Hyperledger Indy schema
+  attributes:
+    - college_licence
+    # TODO assume inclusion with licence_num
+    # - college_num
+    - college_licence_num
+    - college_licence_class
+    # TODO what fields should be included?
+    # legal_name
+    - first_name
+    - last_name
+    # TODO omitted for simplicity
+    # - registration_date
+    # TODO should there even be renewal date?
+    # - renewal_date
+    # TODO omitted for simplicity
+    # TODO should there even be advanced practices?
+    # - adv_practice

@@ -1,0 +1,39 @@
+forms:
+  bcsc-info:
+    path: /bcsc/bcsc-info
+    type: issue-credential
+    schema_name: BCSC Information
+    page_title: BC Services Card
+    title: BCSC
+    template: bcgov.index.html
+    description: >
+      BC Services Card.
+    explanation: Use the form below to register a BC Servies Card User.
+
+    fields:
+      - name: userId
+        label: User ID
+        type: text
+        required: true
+
+      - name: hpdid
+        label: HPDID
+        type: text
+        required: true
+
+      - name: firstName
+        label: First Name
+        type: text
+        required: true
+
+      - name: lastName
+        label: Last Name
+        type: text
+        required: true
+
+    mapping:
+      attributes:
+        - name: entity_name_effective
+          from: helper
+          source: now_iso
+
