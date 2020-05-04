@@ -11,3 +11,4 @@
   attributes:
     - gpid
     # TODO what attributes should be included?
+    # - legal_name
