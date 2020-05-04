@@ -1,0 +1,8 @@
+- name: BCSC Information
+  version: '1.0.7'
+  attributes:
+    - userId
+    - hpdid
+    - firstName
+    - lastName
+
