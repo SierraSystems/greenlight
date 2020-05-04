@@ -156,12 +156,12 @@
                     "value": "${MINISTRY_AGRICULTURE_AGENT_PORT}"
                   },
                   {
-                    "name": "BCREG_AGENT_HOST",
-                    "value": "${BCREG_AGENT_HOST}"
+                    "name": "BCSC_AGENT_HOST",
+                    "value": "${BCSC_AGENT_HOST}"
                   },
                   {
-                    "name": "BCREG_AGENT_PORT",
-                    "value": "${BCREG_AGENT_PORT}"
+                    "name": "BCSC_AGENT_PORT",
+                    "value": "${BCSC_AGENT_PORT}"
                   },
                   {
                     "name": "MINISTRY_FINANCE_AGENT_HOST",
@@ -358,16 +358,16 @@
       "value": "8080"
     },
     {
-      "name": "BCREG_AGENT_HOST",
+      "name": "BCSC_AGENT_HOST",
       "displayName": "Agent Host Name",
-      "description": "The name of the BC Registries von-x agent associated with this proxy.",
+      "description": "The name of the BCSC von-x agent associated with this proxy.",
       "required": true,
       "value": "bc-registries"
     },
     {
-      "name": "BCREG_AGENT_PORT",
+      "name": "BCSC_AGENT_PORT",
       "displayName": "Agent Port",
-      "description": "The port of the BC Registries von-x agent associated with this proxy.",
+      "description": "The port of the BCSC von-x agent associated with this proxy.",
       "required": true,
       "value": "8080"
     },

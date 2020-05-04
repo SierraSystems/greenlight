@@ -2,7 +2,7 @@ const PROXY_CONFIG = [
   {
     context: [
       "/bc-tob",
-      "/bcreg",
+      "/bcsc",
       "/finance",
       "/fraser-valley",
       "/liquor",
