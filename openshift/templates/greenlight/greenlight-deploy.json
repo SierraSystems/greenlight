@@ -362,7 +362,7 @@
       "displayName": "Agent Host Name",
       "description": "The name of the BCSC von-x agent associated with this proxy.",
       "required": true,
-      "value": "bc-registries"
+      "value": "bcsc"
     },
     {
       "name": "BCSC_AGENT_PORT",
