@@ -1,6 +1,6 @@
 forms:
   bcsc-info:
-    path: /bcsc/bcsc-info
+    path: /bcsc/registration
     type: issue-credential
     schema_name: BCSC Information
     page_title: BC Services Card

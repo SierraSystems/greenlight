@@ -31,7 +31,7 @@ issuers:
     credential_types:
       - description: BCSC
         schema: BCSC Information
-        issuer_url: $APPLICATION_URL/bcsc/bcsc-info
+        issuer_url: $APPLICATION_URL/bcsc/registration
         topic:
           source_id:
             input: hpdid
