@@ -120,7 +120,7 @@
       "required": true,
       "value": "latest"
     },
-        {
+    {
       "name": "DOCKER_FILE_PATH",
       "displayName": "Docker File Path",
       "description": "The path to the docker file.",

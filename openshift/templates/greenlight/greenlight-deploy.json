@@ -202,6 +202,14 @@
                   {
                     "name": "WORKSAFE_AGENT_PORT",
                     "value": "${WORKSAFE_AGENT_PORT}"
+                  },
+                  {
+                    "name": "CPBC_AGENT_HOST",
+                    "value": "${CPBC_AGENT_HOST}"
+                  },
+                  {
+                    "name": "CPBC_AGENT_PORT",
+                    "value": "${CPBC_AGENT_PORT}"
                   }
                 ],
                 "readinessProbe": {
@@ -430,6 +438,20 @@
       "name": "WORKSAFE_AGENT_PORT",
       "displayName": "Agent Port",
       "description": "The port of the Worksafe BC von-x agent associated with this proxy.",
+      "required": true,
+      "value": "8080"
+    },
+    {
+      "name": "CPBC_AGENT_HOST",
+      "displayName": "Agent Host Name",
+      "description": "The name of the College of Pharmacists of BC von-x agent associated with this proxy.",
+      "required": true,
+      "value": "cpbc"
+    },
+    {
+      "name": "CPBC_AGENT_PORT",
+      "displayName": "Agent Port",
+      "description": "The port of the College of Pharmacists of BC von-x agent associated with this proxy.",
       "required": true,
       "value": "8080"
     },
