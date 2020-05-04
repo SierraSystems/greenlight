@@ -13,8 +13,8 @@ services:
       WEB_HOST_TLS: ${WEB_HOST_TLS}
       MINISTRY_AGRICULTURE_AGENT_HOST: ${MINISTRY_AGRICULTURE_AGENT_HOST}
       MINISTRY_AGRICULTURE_AGENT_PORT: ${MINISTRY_AGRICULTURE_AGENT_PORT}
-      BCREG_AGENT_HOST: ${BCREG_AGENT_HOST}
-      BCREG_AGENT_PORT: ${BCREG_AGENT_PORT}
+      BCSC_AGENT_HOST: ${BCSC_AGENT_HOST}
+      BCSC_AGENT_PORT: ${BCSC_AGENT_PORT}
       MINISTRY_FINANCE_AGENT_HOST: ${MINISTRY_FINANCE_AGENT_HOST}
       MINISTRY_FINANCE_AGENT_PORT: ${MINISTRY_FINANCE_AGENT_PORT}
       CITY_SURREY_AGENT_HOST: ${CITY_SURREY_AGENT_HOST}
@@ -29,7 +29,7 @@ services:
       CPBC_AGENT_PORT: ${CPBC_AGENT_PORT}
     depends_on:
       - agri-agent
-      - bcreg-agent
+      - bcsc-agent
       - ministry-finance-agent
       - city-surrey-agent
       - fraser-valley-agent
@@ -77,8 +77,8 @@ services:
       WEB_HOST_TLS: ${WEB_HOST_TLS}
       MINISTRY_AGRICULTURE_AGENT_HOST: ${MINISTRY_AGRICULTURE_AGENT_HOST}
       MINISTRY_AGRICULTURE_AGENT_PORT: ${MINISTRY_AGRICULTURE_AGENT_PORT}
-      BCREG_AGENT_HOST: ${BCREG_AGENT_HOST}
-      BCREG_AGENT_PORT: ${BCREG_AGENT_PORT}
+      BCSC_AGENT_HOST: ${BCSC_AGENT_HOST}
+      BCSC_AGENT_PORT: ${BCSC_AGENT_PORT}
       MINISTRY_FINANCE_AGENT_HOST: ${MINISTRY_FINANCE_AGENT_HOST}
       MINISTRY_FINANCE_AGENT_PORT: ${MINISTRY_FINANCE_AGENT_PORT}
       CITY_SURREY_AGENT_HOST: ${CITY_SURREY_AGENT_HOST}
@@ -93,7 +93,7 @@ services:
       CPBC_AGENT_PORT: ${CPBC_AGENT_PORT}
     depends_on:
       - agri-agent
-      - bcreg-agent
+      - bcsc-agent
       - ministry-finance-agent
       - city-surrey-agent
       - fraser-valley-agent
@@ -143,7 +143,7 @@ services:
     volumes:
       - agri-agent-wallet:/home/indy/.indy_client/wallet
 
-  bcreg-agent:
+  bcsc-agent:
     build:
       context: ..
       dockerfile: docker/agent/Dockerfile
@@ -151,7 +151,7 @@ services:
       DOCKERHOST: ${DOCKERHOST}
       APPLICATION_URL: ${APPLICATION_URL:-http://localhost:5000}
       ENDPOINT_URL: ${ENDPOINT_URL:-http://localhost:5000}
-      CONFIG_ROOT: ../config/bcreg-agent
+      CONFIG_ROOT: ../config/bcsc-agent
       ENVIRONMENT: ${ENVIRONMENT:-default}
       INDY_LEDGER_URL: ${LEDGER_URL:-http://localhost:9000}
       LOG_LEVEL: ${LOG_LEVEL}
@@ -165,14 +165,14 @@ services:
       POSTGRESQL_WALLET_ADMIN_PASSWORD: ${POSTGRESQL_ADMIN_PASSWORD}
       WALLET_ENCRYPTION_KEY: ${WALLET_ENCRYPTION_KEY}
       INDY_WALLET_TYPE: ${INDY_WALLET_TYPE}
-      INDY_WALLET_SEED: ${BCREG_WALLET_SEED}
+      INDY_WALLET_SEED: ${BCSC_WALLET_SEED}
     networks:
       - orgbook
       - vonx
     depends_on:
       - agent-wallet-db
     volumes:
-      - bcreg-agent-wallet:/home/indy/.indy_client/wallet
+      - bcsc-agent-wallet:/home/indy/.indy_client/wallet
 
   ministry-finance-agent:
     build:
@@ -378,7 +378,7 @@ volumes:
   caddy-data:
   caddy-logs:
   agri-agent-wallet:
-  bcreg-agent-wallet:
+  bcsc-agent-wallet:
   ministry-finance-agent-wallet:
   city-surrey-agent-wallet:
   fraser-valley-agent-wallet:

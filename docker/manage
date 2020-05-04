@@ -75,7 +75,7 @@ exit 1
 # Default Settings:
 # -----------------------------------------------------------------------------------------------------------------
 
-DEFAULT_CONTAINERS="agent-wallet-db agri-agent bcreg-agent ministry-finance-agent city-surrey-agent fraser-valley-agent liquor-control-agent worksafe-agent cpbc-agent"
+DEFAULT_CONTAINERS="agent-wallet-db agri-agent bcsc-agent ministry-finance-agent city-surrey-agent fraser-valley-agent liquor-control-agent worksafe-agent cpbc-agent"
 
 # -----------------------------------------------------------------------------------------------------------------
 # Functions:
@@ -116,8 +116,8 @@ configureEnvironment () {
   export WEB_HTTP_PORT=${WEB_HTTP_PORT:-5000}
   export MINISTRY_AGRICULTURE_AGENT_HOST=${MINISTRY_AGRICULTURE_AGENT_HOST:-agri-agent}
   export MINISTRY_AGRICULTURE_AGENT_PORT=${MINISTRY_AGRICULTURE_AGENT_PORT:-8000}
-  export BCREG_AGENT_HOST=${BCREG_AGENT_HOST:-bcreg-agent}
-  export BCREG_AGENT_PORT=${BCREG_AGENT_PORT:-8000}
+  export BCSC_AGENT_HOST=${BCSC_AGENT_HOST:-bcsc-agent}
+  export BCSC_AGENT_PORT=${BCSC_AGENT_PORT:-8000}
   export MINISTRY_FINANCE_AGENT_HOST=${MINISTRY_FINANCE_AGENT_HOST:-ministry-finance-agent}
   export MINISTRY_FINANCE_AGENT_PORT=${MINISTRY_FINANCE_AGENT_PORT:-8000}
   export CITY_SURREY_AGENT_HOST=${CITY_SURREY_AGENT_HOST:-city-surrey-agent}
