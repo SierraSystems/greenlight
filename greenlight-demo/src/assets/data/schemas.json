@@ -70,6 +70,14 @@
       "name": "cpbc.greenlight",
       "version": "1.0.0",
       "origin_did": "A9Rsuu7FNquw8Nf2Smu5Nr"
+    },
+    {
+      "id": 9,
+      "create_timestamp": "2020-04-03T10:40:34.050700-08:00",
+      "update_timestamp": "2020-04-03T10:40:34.053745-08:00",
+      "name": "gpid.greenlight",
+      "version": "1.0.0",
+      "origin_did": "A9Rsuu7FNquw9Nf2Smu5Nr"
     }
   ]
 }

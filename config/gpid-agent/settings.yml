@@ -1,0 +1,13 @@
+# settings.yml contains a list of environment variables that must be
+# set appropriately to allow the agent to connect to the other
+# components of VON, specifically, the ledger being used and an
+# instance of OrgBook. The values in the file change with each
+# environment (e.g. local, in browser, dev, test and prod).
+#
+# @see https://github.com/bcgov/von-agent-template/tree/master/von-x-agent/config
+
+default:
+  TEMPLATE_PATH: ../templates
+  TOB_API_URL: http://tob-api:8080/api/v2
+  TOB_APP_URL: http://localhost:8080
+  INDY_WALLET_SEED: gpid_dev_00000000000000000000000

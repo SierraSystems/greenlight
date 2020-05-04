@@ -210,6 +210,14 @@
                   {
                     "name": "CPBC_AGENT_PORT",
                     "value": "${CPBC_AGENT_PORT}"
+                  },
+                  {
+                    "name": "GPID_AGENT_HOST",
+                    "value": "${GPID_AGENT_HOST}"
+                  },
+                  {
+                    "name": "GPID_AGENT_PORT",
+                    "value": "${GPID_AGENT_PORT}"
                   }
                 ],
                 "readinessProbe": {

@@ -27,6 +27,8 @@ services:
       WORKSAFE_AGENT_PORT: ${WORKSAFE_AGENT_PORT}
       CPBC_AGENT_HOST: ${CPBC_AGENT_HOST}
       CPBC_AGENT_PORT: ${CPBC_AGENT_PORT}
+      GPID_AGENT_HOST: ${GPID_AGENT_HOST}
+      GPID_AGENT_PORT: ${GPID_AGENT_PORT}
     depends_on:
       - agri-agent
       - bcsc-agent
@@ -36,6 +38,7 @@ services:
       - liquor-control-agent
       - worksafe-agent
       - cpbc-agent
+      - gpid-agent
     networks:
       - orgbook
       - vonx
@@ -91,6 +94,8 @@ services:
       WORKSAFE_AGENT_PORT: ${WORKSAFE_AGENT_PORT}
       CPBC_AGENT_HOST: ${CPBC_AGENT_HOST}
       CPBC_AGENT_PORT: ${CPBC_AGENT_PORT}
+      GPID_AGENT_HOST: ${GPID_AGENT_HOST}
+      GPID_AGENT_PORT: ${GPID_AGENT_PORT}
     depends_on:
       - agri-agent
       - bcsc-agent
@@ -100,6 +105,7 @@ services:
       - liquor-control-agent
       - worksafe-agent
       - cpbc-agent
+      - gpid-agent
     networks:
       - orgbook
       - vonx
@@ -360,6 +366,37 @@ services:
     volumes:
       - cpbc-agent-wallet:/home/indy/.indy_client/wallet
 
+  gpid-agent:
+    build:
+      context: ..
+      dockerfile: docker/agent/Dockerfile
+    environment:
+      DOCKERHOST: ${DOCKERHOST}
+      APPLICATION_URL: ${APPLICATION_URL:-http://localhost:5000}
+      ENDPOINT_URL: ${ENDPOINT_URL:-http://localhost:5000}
+      CONFIG_ROOT: ../config/gpid-agent
+      ENVIRONMENT: ${ENVIRONMENT:-default}
+      INDY_LEDGER_URL: ${LEDGER_URL:-http://localhost:9000}
+      LOG_LEVEL: ${LOG_LEVEL}
+      PYTHON_ENV: ${PYTHON_ENV:-development}
+      TOB_API_URL: ${TOB_API_URL}
+      TOB_APP_URL: ${TOB_APP_URL}
+      POSTGRESQL_WALLET_HOST: ${POSTGRESQL_WALLET_HOST}
+      POSTGRESQL_WALLET_PORT: ${POSTGRESQL_WALLET_PORT}
+      POSTGRESQL_WALLET_USER: ${POSTGRESQL_USER}
+      POSTGRESQL_WALLET_PASSWORD: ${POSTGRESQL_PASSWORD}
+      POSTGRESQL_WALLET_ADMIN_PASSWORD: ${POSTGRESQL_ADMIN_PASSWORD}
+      WALLET_ENCRYPTION_KEY: ${WALLET_ENCRYPTION_KEY}
+      INDY_WALLET_TYPE: ${INDY_WALLET_TYPE}
+      INDY_WALLET_SEED: ${GPID_WALLET_SEED}
+    networks:
+      - orgbook
+      - vonx
+    depends_on:
+      - agent-wallet-db
+    volumes:
+      - gpid-agent-wallet:/home/indy/.indy_client/wallet
+
   agent-wallet-db:
     image: registry.access.redhat.com/rhscl/postgresql-10-rhel7:latest
     environment:
@@ -385,6 +422,7 @@ volumes:
   liquor-control-agent-wallet:
   worksafe-agent-wallet:
   cpbc-agent-wallet:
+  gpid-agent-wallet:
   agent-wallet-db:
 
 networks:

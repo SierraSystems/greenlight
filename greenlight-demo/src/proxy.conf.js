@@ -9,6 +9,7 @@ const PROXY_CONFIG = [
       "/surrey",
       "/worksafe",
       "/cpbc",
+      "/gpid",
       "/topic"
     ],
     target: "http://proxy-dev:8080",
