@@ -11,15 +11,16 @@
   version: '1.0.1'
   # Used in VON, but not passed to Hyperledger Indy schema
   attributes:
-    - college_licence
+    # - college_licence
     # TODO assume inclusion with licence_num
     # - college_num
-    - college_licence_num
-    - college_licence_class
+    - licence_num
+    - licence_class
     # TODO what fields should be included?
-    # legal_name
-    - first_name
-    - last_name
+    - legal_name
+    # - first_name
+    # - last_name
+    - address
     # TODO omitted for simplicity
     # - registration_date
     # TODO should there even be renewal date?
