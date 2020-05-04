@@ -11,13 +11,13 @@ forms:
     explanation: Use the form below to register a BC Services Card.
 
     fields:
-      - name: user_id
-        label: User ID
+      - name: hpdid
+        label: HPDID
         type: text
         required: true
 
-      - name: hpdid
-        label: HPDID
+      - name: user_id
+        label: User ID
         type: text
         required: true
 

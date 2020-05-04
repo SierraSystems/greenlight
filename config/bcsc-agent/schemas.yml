@@ -1,7 +1,7 @@
 - name: BCSC Information
   version: '1.0.7'
   attributes:
-    - user_id
     - hpdid
+    - user_id
     - first_name
     - last_name
