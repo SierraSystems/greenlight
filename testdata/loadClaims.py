@@ -25,7 +25,7 @@ import time
 
 import aiohttp
 
-DEFAULT_AGENT_URL = os.environ.get("AGENT_URL", "http://localhost:5000/bcreg")
+DEFAULT_AGENT_URL = os.environ.get("AGENT_URL", "http://localhost:5000/bcsc")
 
 parser = argparse.ArgumentParser(
     description="Issue one or more credentials via von-x"

@@ -27,7 +27,7 @@ import sys
 
 import aiohttp
 
-AGENT_URL = os.environ.get('AGENT_URL', 'http://localhost:5000/bcreg')
+AGENT_URL = os.environ.get('AGENT_URL', 'http://localhost:5000/bcsc')
 
 if len(sys.argv) < 2:
     raise ValueError("Expected legal_entity_id(s)")
