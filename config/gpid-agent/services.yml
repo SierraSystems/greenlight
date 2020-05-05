@@ -41,6 +41,7 @@ issuers:
         issuer_url: $APPLICATION_URL/gpid/registration
         depends_on:
           - registration
+          - college
         topic:
           source_id:
             # Glue between credentials from root
@@ -86,3 +87,14 @@ proof_requests:
           # - legal_name
           # - first_name
           # - last_name
+  college:
+    version: '1.0.1'
+    schemas:
+      - key:
+          did: 4ogkLKsPRJWUhTp9Qggyxn
+          name: Registered Pharmacist
+          version: '1.0.1'
+        attributes:
+          - hpdid
+          - licence_num
+          - licence_class

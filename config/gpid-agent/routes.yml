@@ -37,6 +37,22 @@ forms:
         type: text
         required: true
 
+      - name: licence_num
+        label: Licence Number
+        type: text
+        required: true
+
+      - name: licence_class
+        label: Licence Class
+        type: select
+        options:
+          - Full Pharmacist
+          - Limited Pharmacist
+          - Student Pharmacist
+          - Temporary Pharmacist
+          - Non-Practicing Pharmacist
+        required: true
+
       # TODO what fields should be included?
       # - name: legal_name
       #   label: General Practitioner ID

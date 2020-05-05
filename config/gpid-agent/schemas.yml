@@ -11,5 +11,7 @@
   attributes:
     - hpdid
     - gpid
+    - licence_num
+    - licence_class
     # TODO what attributes should be included?
     # - legal_name
