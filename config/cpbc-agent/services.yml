@@ -36,7 +36,7 @@ issuers:
         key_derivation_method: ARGON2I_MOD
 
     credential_types:
-      - description: Registration
+      - description: CPBC
         schema: Registered Pharmacist
         issuer_url: $APPLICATION_URL/cpbc/registration
         depends_on:
@@ -51,25 +51,24 @@ issuers:
             # - Will be a value that automatically fills
             input: registration
             from: value
-        # TODO how is this mapped?
-        # mapping:
-          # TODO name vs attribute?
-          # - model: name
-          #   fields:
-          #     text:
-          #       input: last_name
-          #       from: claim
-          #     type:
-          #       input: last_name
-          #       from: value
-          # - model: attribute
-          #   fields:
-          #     text:
-          #       input: licence_num
-          #       from: claim
-          #     type:
-          #       input: licence_num
-          #       from: value
+        # "Publicly" viewable attributes in HealthBook
+        mapping:
+          - model: attribute
+            fields:
+              type:
+                input: licence_num
+                from: value
+              value:
+                input: licence_num
+                from: claim
+          - model: attribute
+            fields:
+              type:
+                input: licence_class
+                from: value
+              value:
+                input: licence_class
+                from: claim
 
 verifiers:
   bctob:

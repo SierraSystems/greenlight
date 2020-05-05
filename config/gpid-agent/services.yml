@@ -36,7 +36,7 @@ issuers:
         key_derivation_method: ARGON2I_MOD
 
     credential_types:
-      - description: Registration
+      - description: GPID
         schema: General Practitioner ID
         issuer_url: $APPLICATION_URL/gpid/registration
         depends_on:
@@ -52,18 +52,16 @@ issuers:
             # - Will be a value that automatically fills
             input: registration
             from: value
-        # TODO what does this mapping do?
-        # TODO suspect that this is a mapping of field name from the credential to this agents form
-        # mapping:
-        #   # TODO model: name vs attribute?
-        #   - model: attribute
-        #     fields:
-        #       type:
-        #         input: hpdid
-        #         from: value
-        #       value:
-        #         input: hpdid
-        #         from: claim
+        # "Publicly" viewable attributes in HealthBook
+        mapping:
+          - model: attribute
+            fields:
+              type:
+                input: gpid
+                from: value
+              value:
+                input: gpid
+                from: claim
 
 verifiers:
   bctob:
