@@ -50,12 +50,12 @@ issuers:
                 from: value
           - model: attribute
             fields:
-              text:
-                input: last_name
-                from: claim
               type:
                 input: last_name
                 from: value
+              value:
+                input: last_name
+                from: claim
           - model: attribute
             fields:
               type:
