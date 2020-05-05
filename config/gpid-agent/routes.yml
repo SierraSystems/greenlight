@@ -10,7 +10,7 @@ forms:
   gpid-reg:
     path: /gpid/registration
     type: issue-credential
-    schema_name: Registered General Practitioner
+    schema_name: General Practitioner ID
     page_title: General Practitioner ID Registry
     title: Registration
     template: bcgov.index.html
