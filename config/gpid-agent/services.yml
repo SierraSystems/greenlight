@@ -42,13 +42,15 @@ issuers:
         topic:
           source_id:
             # TODO what should the source_id be?
-            input: gpid
+            input: hpid
             from: claim
           type:
             # TODO should there be a registration input?
             # TODO what should the registration be?
             input: registration
             from: value
+        depends_on:
+          - registration
         # TODO how is this mapped?
         # mapping:
           # TODO name vs attribute?
@@ -78,14 +80,13 @@ verifiers:
     wallet:
       seed: "tob-verifier-wallet-000000000001"
 
-# TODO add proof request dependency on HPDID?
-# proof_requests:
-#   registration:
-#     version: '1.0.x'
-#     schemas:
-#       - key:
-#           did: ?
-#           name: ?
-#           version: '1.0.x'
-#         attributes:
-#           - hpdid
+proof_requests:
+  registration:
+    version: '1.0.7'
+    schemas:
+      - key:
+          did: TpUxciSx8mQQULW3uspf7p
+          name: BCSC Information
+          version: '1.0.7'
+        attributes:
+          - hpdid
