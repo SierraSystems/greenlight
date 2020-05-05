@@ -19,8 +19,8 @@ The following **Quick Start Guide** will have you up and running in no time.  Fo
 8. Ensure TheOrgBook is running by opening a browser window to http://localhost:8080/en/home
 9.  From `.../greenlight/docker` run `./manage start`
 10. Wait for all of the issuer services to start up.
-11. Ensure the issuer services are running by opening a browser window to http://localhost:5000/ and checking that all of the Credentials from the pre-configured Agents are listed in the `Credentials` drop-down. As of this writing, their should be 8.
-12. You should now be able to browse to http://localhost:5000, select a Credential to get (leave the Organization field blank) and go through the Credential acquisition process(es).
+11. Ensure the issuer services are running by opening a browser window to http://localhost:6000/ and checking that all of the Credentials from the pre-configured Agents are listed in the `Credentials` drop-down. As of this writing, their should be 8.
+12. You should now be able to browse to http://localhost:6000, select a Credential to get (leave the Organization field blank) and go through the Credential acquisition process(es).
 
 ## Hosting from a remote machine
 
@@ -30,7 +30,7 @@ These examples use `192.168.15.117` as the IP address. Replace `192.168.15.117` 
 
 1. From `.../von-network` run `./manage start 192.168.15.117 &`, and wait for the von-network components to fully start.
 1. From `.../TheOrgBook/docker` run `./manage start seed=the_org_book_0000000000000000000 APPLICATION_URL=http://192.168.15.117:8080 LEDGER_URL=http://192.168.15.117:9000`
-1.  From `.../greenlight/docker` run `./manage start APPLICATION_URL=http://192.168.15.117:5000 LEDGER_URL=http://192.168.15.117:9000 TOB_API_URL=http://192.168.15.117:8081/api/v2 TOB_APP_URL=http://192.168.15.117:8080 ENDPOINT_URL=http://192.168.15.117:5000`
+1.  From `.../greenlight/docker` run `./manage start APPLICATION_URL=http://192.168.15.117:6000 LEDGER_URL=http://192.168.15.117:9000 TOB_API_URL=http://192.168.15.117:8081/api/v2 TOB_APP_URL=http://192.168.15.117:8080 ENDPOINT_URL=http://192.168.15.117:6000`
 
 ## Stopping/Shutting Down
 
@@ -49,7 +49,7 @@ To stop GreenLight and delete the persistence, use:
 ./manage down
 ```
 
-This command will stop and remove any project related containers and associated volumes. If you do want to run VON again, run the same command for `TheOrgBook` and `von-network` before restarting each per the instructions above. 
+This command will stop and remove any project related containers and associated volumes. If you do want to run VON again, run the same command for `TheOrgBook` and `von-network` before restarting each per the instructions above.
 
 ## Shells
 

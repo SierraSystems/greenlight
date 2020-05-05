@@ -48,7 +48,7 @@ The following are notes about the example file above and `schemas.yml` files in 
 A config file generator has been created that can be used to derive sections of the `services.yml` and `routes.yml` files from the `schemas.yml` file. That is done by adding some extra fields in this file (that are ignored by the VON Agent code). Those extra fields are documented in the section below on the config file generator.
 
 
-  On Agent startup, the Agent reads the `schemas.yml` file and looks in it's Wallet for the corresponding Credential Definitions and Schemata. If it does not find them, the Agent publishes them to the Ledger. 
+  On Agent startup, the Agent reads the `schemas.yml` file and looks in it's Wallet for the corresponding Credential Definitions and Schemata. If it does not find them, the Agent publishes them to the Ledger.
   - **Note**: VON Agent currently assumes that the Agent itself will always publish the Schema to the Ledger. **TO DO** Confirm this.
 
 ## File: [settings.yml](settings.yml)
@@ -147,7 +147,7 @@ The following are notes about the example presented above:
   - if `js_includes` `src` is set, the value must be a file also within the `TEMPLATE_PATH` folder.
 - The `proof_request`, `fields` and `mapping` section are discussed below.
 
-As the Web Form loads, any `proof_request` entries referenced in this file (`routes.yml`) and defined in `services.yml` are executed and must be successful for the form to load. If a `proof_request` is reference and the proof request fails, the form does not load and an error message is displayed. A referenced `proof_request` could fail either because no identifier is passed to the form (so no proof request to OrgBook is possible), or if the identified organization does not have the required active Credential.  Any attribute in the form's Credential that has the same name as a claim in a prerequisite proof request is pre-populated with the value of the proven claim. 
+As the Web Form loads, any `proof_request` entries referenced in this file (`routes.yml`) and defined in `services.yml` are executed and must be successful for the form to load. If a `proof_request` is reference and the proof request fails, the form does not load and an error message is displayed. A referenced `proof_request` could fail either because no identifier is passed to the form (so no proof request to OrgBook is possible), or if the identified organization does not have the required active Credential.  Any attribute in the form's Credential that has the same name as a claim in a prerequisite proof request is pre-populated with the value of the proven claim.
 
 
 `fields` is a list of the attibutes that are to listed on the Web Form with a `label` and a `type` that defines how the data will be collected - e.g. what widget will be used for the field. The `required` defines if the field must be filled in to submit the Credential. The current list of options are the following:
@@ -168,7 +168,7 @@ All fields in the Credential (or at least all required fields) must be in either
 
 The following lists a number of features of OrgBook that require information from Credential Issuers to work.
 
-- OrgBook provides several search capabilities, including names, addresses/locations, Credential Types and dates. 
+- OrgBook provides several search capabilities, including names, addresses/locations, Credential Types and dates.
   - `services.yml` provides information about what attributes should be added to the different search indices - e.g. what Credential attribute is a "name" that should be searchable, etc.
 - OrgBook has the concept of a "subject entity", the entity (e.g. an incorporated organization, a sole proprietorship, a professional, etc.) that is the subject of a Credential. Further, OrgBook has the concept that all Credentials issued to an instance of the OrgBook include an attribute that links that Credential to it's subject entity.
   - `services.yml` informs OrgBook what attribute in an issued Credential is it's subject entity ID.
@@ -176,7 +176,7 @@ The following lists a number of features of OrgBook that require information fro
   - `services.yml` maps Credential attributes to OrgBook instance-specific data elements for presentation in the user interface for each OrgBook instance.
   - Note that in addition, `schemas.yml` provides localized information about attributes that are also presented in the user interface.
 - OrgBook has the concept of a Credential "cardinality" based on a unique key derived from one or more attributes. When a Credential is received, OrgBook marks the Credential as new or as a replacement for an existing Credential (marking that one as inactive) based on the data in the cardinality attributes.
-  - `services.yml` defines the cardinality of each Credential the Agent issues. 
+  - `services.yml` defines the cardinality of each Credential the Agent issues.
   - OrgBook uses the cardinality to present a timeline of each Credential Set - Credentials issued with the same data values in the cardinality attributes.
 
 The following is an example of a basic `services.yml` file, broken into sections. Notes about the content follows the section of the example:
@@ -229,7 +229,7 @@ issuers:
     credential_types:
     - description: Permit
       schema: my-permit.my-organization.ca
-      issuer_url: http://localhost:5000/my-organization/my-permit
+      issuer_url: http://localhost:6000/my-organization/my-permit
       depends_on:
         - greenlight_registration
         - pst_number
@@ -255,7 +255,7 @@ The `credential_types` structure is repeated for each Credential issued by the A
 - The `description` element is Credential metadata
 - `schema` must match one of the schema `name` values in the `schemas.yml` file
 - `issuer_url` must match the `path` value in the `routes.yml` file for route for the Credential using the same schema
-- `depends_on` defines the prerequisite proofs that must be satisfied before a Credential can be issued. The depends_on list of values are references to `proof_requests` later in the file (described below) 
+- `depends_on` defines the prerequisite proofs that must be satisfied before a Credential can be issued. The depends_on list of values are references to `proof_requests` later in the file (described below)
   - **Note**: When the VON Issuer/Verifier Web Form is invoked for a credential, the proof requests for that Credential are executed, and the form is not displayed if the proofs are not succcessful. However, there is no requirement that an Agent complete the proof requests prior to issuing a Credential. It is the responsibility of the Agent and the Service driving the Agent to make sure that the Business Requirements and data values are correct, whether or not the prerequisite proofs are completed.
 - `effective_date` is an OrgBook concept that drives the timeline feature, setting when a particular Credential came into affect, regardless of when it was issued to OrgBook. The value tells OrgBook how to get that value for this credential. In this case, it is being pulled from a claim in the Credential called `effective_date` (clever name!).
   - OrgBook does not want to use `now()` as the effective date since, especially on initial loading, existing and historical Credentials will be issued to OrgBook in bulk. Ideally, we can get the effective date from the Credential. Failing that, some other business rule could be used, including just setting it to `now()`.

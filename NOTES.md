@@ -2,7 +2,7 @@
 
 ## BCSC Information
 
-URL: localhost:5000/bcsc/issue-credential
+URL: localhost:6000/bcsc/issue-credential
 Payload:
 ```
 [
@@ -21,7 +21,7 @@ Payload:
 
 ## CPBC Information
 
-URL: localhost:5000/cpbc/issue-credential
+URL: localhost:6000/cpbc/issue-credential
 Payload:
 ```
 [
@@ -39,7 +39,7 @@ Payload:
 
 ## GPID Information
 
-URL: localhost:5000/gpid/issue-credential
+URL: localhost:6000/gpid/issue-credential
 Payload:
 ```
 [
