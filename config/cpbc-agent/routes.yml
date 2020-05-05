@@ -7,7 +7,7 @@
 # @see https://github.com/bcgov/von-agent-template/tree/master/von-x-agent/config
 
 forms:
-  cpbc-reg:
+  cpbc:
     path: /cpbc/registration
     type: issue-credential
     schema_name: Registered Pharmacist
@@ -19,6 +19,11 @@ forms:
       by ensuring that registered pharmacy professionals provide safe
       and effective pharmacy care.
     explanation: Use the form below to register with the College of Pharmacists of BC
+
+    # Automatically fill from the claim by mapping it to the form
+    proof_request:
+      id: registration
+      connection_id: bctob
 
     fields:
       - name: hpdid

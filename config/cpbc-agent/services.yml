@@ -39,14 +39,16 @@ issuers:
       - description: Registration
         schema: Registered Pharmacist
         issuer_url: $APPLICATION_URL/cpbc/registration
+        depends_on:
+          - registration
         topic:
           source_id:
-            # TODO what should the source_id be?
-            input: licence_num
+            # Glue between credentials from root
+            input: hpdid
             from: claim
           type:
-            # TODO should there be a registration input?
-            # TODO what should the registration be?
+            # Name of the proof request (see below)
+            # - Will be a value that automatically fills
             input: registration
             from: value
         # TODO how is this mapped?
@@ -78,16 +80,16 @@ verifiers:
     wallet:
       seed: "tob-verifier-wallet-000000000001"
 
-# TODO would be to add a dependency to pharmacists to create a mapping for PharmaNet
-# proof_requests:
-#   registration:
-#     version: '1.0.7'
-#     schemas:
-#       - key:
-#           did: 6qnvgJtqwK44D8LFYnV5Yf
-#           name: BCSC Information
-#           version: '1.0.7'
-#         attributes:
-#           - hpdid
-#           - first_name
-#           - last_name
+proof_requests:
+  registration:
+    version: '1.0.7'
+    schemas:
+      - key:
+          did: TpUxciSx8mQQULW3uspf7p
+          name: BCSC Information
+          version: '1.0.7'
+        attributes:
+          - hpdid
+          # - legal_name
+          # - first_name
+          # - last_name
