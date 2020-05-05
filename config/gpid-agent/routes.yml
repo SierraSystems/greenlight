@@ -21,6 +21,7 @@ forms:
       the province must be registrants of the College.
     explanation: Use the form below to register a General Practitioner ID (GPID).
 
+    # Automatically fill the value through mapping it to the form
     proof_request:
       id: registration
       connection_id: bctob

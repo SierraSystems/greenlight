@@ -51,7 +51,7 @@ issuers:
             # - Will be a value that automatically fills
             input: registration
             from: value
-        # Automatically fill the value through mapping it to the form
+        # TODO what does this mapping do?
         # mapping:
         #   # TODO model: name vs attribute?
         #   - model: attribute
