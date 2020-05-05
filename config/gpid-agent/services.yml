@@ -52,6 +52,7 @@ issuers:
             input: registration
             from: value
         # TODO what does this mapping do?
+        # TODO suspect that this is a mapping of field name from the credential to this agents form
         # mapping:
         #   # TODO model: name vs attribute?
         #   - model: attribute
