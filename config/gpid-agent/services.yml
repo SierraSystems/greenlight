@@ -41,18 +41,18 @@ issuers:
         issuer_url: $APPLICATION_URL/gpid/registration
         topic:
           source_id:
-            # TODO what should the source_id be?
-            input: hpid
+            # Glue between credentials from root
+            input: hpdid
             from: claim
           type:
-            # TODO should there be a registration input?
-            # TODO what should the registration be?
+            # Name of the proof request (see below)
+            # - Will be a value that automatically fills
             input: registration
             from: value
         depends_on:
           - registration
-        # TODO how is this mapped?
-        # mapping:
+        # Automatically fill the value through mapping it to the form
+        mapping:
           # TODO name vs attribute?
           # - model: name
           #   fields:
@@ -62,14 +62,14 @@ issuers:
           #     type:
           #       input: last_name
           #       from: value
-          # - model: attribute
-          #   fields:
-          #     text:
-          #       input: licence_num
-          #       from: claim
-          #     type:
-          #       input: licence_num
-          #       from: value
+          - model: attribute
+            fields:
+              text:
+                input: hpdid
+                from: claim
+              type:
+                input: hpdid
+                from: value
 
 verifiers:
   bctob:
