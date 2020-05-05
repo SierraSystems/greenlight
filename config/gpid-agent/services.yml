@@ -67,9 +67,9 @@ issuers:
               text:
                 input: hpdid
                 from: claim
-              type:
-                input: hpdid
-                from: value
+              # type:
+              #   input: hpdid
+              #   from: value
 
 verifiers:
   bctob:
