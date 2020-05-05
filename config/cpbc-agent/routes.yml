@@ -21,6 +21,11 @@ forms:
     explanation: Use the form below to register with the College of Pharmacists of BC
 
     fields:
+      - name: hpdid
+        label: HPDID
+        type: text
+        required: true
+
       # TODO college prefix of P1 should be applied automatically or to view
       - name: licence_num
         label: Licence Number
@@ -39,10 +44,10 @@ forms:
         required: true
 
       # TODO what fields should be included?
-      - name: legal_name
-        label: Legal Name
-        type: text
-        required: true
+      # - name: legal_name
+      #   label: Legal Name
+      #   type: text
+      #   required: true
 
       # - name: first_name
       #   label: First Name

@@ -42,7 +42,7 @@ issuers:
         topic:
           source_id:
             # TODO what should the source_id be?
-            input: hpdid
+            input: licence_num
             from: claim
           type:
             # TODO should there be a registration input?
@@ -81,21 +81,13 @@ verifiers:
 # TODO would be to add a dependency to pharmacists to create a mapping for PharmaNet
 # proof_requests:
 #   registration:
-#     version: '1.0.3'
+#     version: '1.0.7'
 #     schemas:
 #       - key:
 #           did: 6qnvgJtqwK44D8LFYnV5Yf
-#           name: Registered Corporation
-#           version: '1.0.3'
+#           name: BCSC Information
+#           version: '1.0.7'
 #         attributes:
-#           - corp_num
-#           - legal_name
-#   clearance-letter:
-#     version: '1.0.3'
-#     schemas:
-#       - key:
-#           did: MAcounf9HxhgnqqhzReTLC
-#           name: WorkSafe BC Coverage
-#           version: '1.0.3'
-#         attributes:
-#           - corp_num
+#           - hpdid
+#           - first_name
+#           - last_name

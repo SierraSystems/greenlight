@@ -22,6 +22,11 @@ forms:
     explanation: Use the form below to register a General Practitioner ID (GPID).
 
     fields:
+      - name: hpdid
+        label: HPDID
+        type: text
+        required: true
+
       - name: gpid
         label: General Practitioner ID
         type: text

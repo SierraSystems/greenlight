@@ -42,7 +42,7 @@ issuers:
         topic:
           source_id:
             # TODO what should the source_id be?
-            input: hpdid
+            input: gpid
             from: claim
           type:
             # TODO should there be a registration input?
