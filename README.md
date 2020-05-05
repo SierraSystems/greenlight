@@ -78,8 +78,8 @@ myorg-agent:
       dockerfile: docker/agent/Dockerfile
     environment:
       DOCKERHOST: ${DOCKERHOST}
-      APPLICATION_URL: ${APPLICATION_URL:-http://localhost:6000}
-      ENDPOINT_URL: ${ENDPOINT_URL:-http://localhost:6000}
+      APPLICATION_URL: ${APPLICATION_URL:-http://localhost:5000}
+      ENDPOINT_URL: ${ENDPOINT_URL:-http://localhost:5000}
       CONFIG_ROOT: ../config/agri-agent
       ENVIRONMENT: ${ENVIRONMENT:-default}
       INDY_LEDGER_URL: ${LEDGER_URL:-http://localhost:9000}
@@ -141,7 +141,7 @@ In the `manage` script in the docker directory:
 - export the environment variables for the new agent. See how this is done for other agents in the configuration section related to "caddy".
 ```
 export MYORG_AGENT_HOST=${MYORG_AGENT_HOST:-myorg-agent}
-export MYORG_AGENT_PORT=${MYORG_AGENT_PORT:-8000}
+export MYORG_AGENT_PORT=${MYORG_AGENT_PORT:-8000}  
 ```
 - add the new agent to the `DEFAULT_CONTAINERS` list.
 ```

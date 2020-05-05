@@ -25,7 +25,7 @@ To get full usage information on the script run:
 ```sh
 ./manage
 ```
-
+  
 ## Building the Images
 
 The first thing you'll need to do is build the Docker images.  Since this requires a combination of Docker and S2I builds the process has been scripted inside `manage`.  _The `docker-compose.yml` file does not perform any of the builds._
@@ -60,7 +60,7 @@ and
 ./manage down
 ```
 
-`stop` only stops the containers, but leaves the rest of the `docker-compose` structure in place - volumes (and the Indy wallets they store) and networking.
+`stop` only stops the containers, but leaves the rest of the `docker-compose` structure in place - volumes (and the Indy wallets they store) and networking.  
 
 `down` is destructive, removing the volumes and network elements.
 
@@ -68,7 +68,7 @@ Often during a debugging session, `stop` is sufficient as want to keep your wall
 
 ## Using the Application
 
-* The GreenLight user interface is exposed at [http://localhost:6000/](http://localhost:6000/)
+* The GreenLight user interface is exposed at [http://localhost:5000/](http://localhost:5000/)
 
 To confirm the application initialization is complete, go to the GreenLight screen and look at the `Credentials` drop down. It should have all of the Credentials for the Issuer/Verifier Agents listed - currently 8 entries. If only some are showing, wait and refresh the screen until all are displayed.
 
@@ -78,10 +78,10 @@ If the user interface does not start, or the `Credentials` drop down does not po
 
 To check whether the issuer services have started browse to the *healthcheck* endpoint of each service.  An **ok** response from the service indicates it is ready.  A full list of the services (and their urls) can be found in the [CaddyFile](https://github.com/bcgov/greenlight/blob/master/caddy/Caddyfile) of the GreenLight application.
 
-[http://localhost:6000/bcreg/health](http://localhost:6000/bcreg/health)
-[http://localhost:6000/finance/health](http://localhost:6000/finance/health)
-[http://localhost:6000/surrey/health](http://localhost:6000/surrey/health)
-[http://localhost:6000/fraser-valley/health](http://localhost:6000/fraser-valley/health)
-[http://localhost:6000/liquor/health](http://localhost:6000/liquor/health)
-[http://localhost:6000/worksafe/health](http://localhost:6000/worksafe/health)
-[http://localhost:6000/agri/health](http://localhost:6000/agri/health)
+[http://localhost:5000/bcreg/health](http://localhost:5000/bcreg/health)
+[http://localhost:5000/finance/health](http://localhost:5000/finance/health)
+[http://localhost:5000/surrey/health](http://localhost:5000/surrey/health)
+[http://localhost:5000/fraser-valley/health](http://localhost:5000/fraser-valley/health)
+[http://localhost:5000/liquor/health](http://localhost:5000/liquor/health)
+[http://localhost:5000/worksafe/health](http://localhost:5000/worksafe/health)
+[http://localhost:5000/agri/health](http://localhost:5000/agri/health)

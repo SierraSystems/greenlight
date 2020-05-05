@@ -3,7 +3,7 @@
 forms:
   dog-cat-breeder-licence:
 
-    # URL for the Web form - becomes <server>/<path> e.g. http://localhost:6000/agri/dog-cat-breeder-licence
+    # URL for the Web form - becomes <server>/<path> e.g. http://localhost:5000/agri/dog-cat-breeder-licence
     path: /agri/dog-cat-breeder-licence
 
     # type is always "issue-credential"
