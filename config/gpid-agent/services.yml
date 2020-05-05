@@ -39,6 +39,8 @@ issuers:
       - description: Registration
         schema: General Practitioner ID
         issuer_url: $APPLICATION_URL/gpid/registration
+        depends_on:
+          - registration
         topic:
           source_id:
             # Glue between credentials from root
@@ -49,27 +51,17 @@ issuers:
             # - Will be a value that automatically fills
             input: registration
             from: value
-        depends_on:
-          - registration
         # Automatically fill the value through mapping it to the form
-        mapping:
-          # TODO name vs attribute?
-          # - model: name
-          #   fields:
-          #     text:
-          #       input: last_name
-          #       from: claim
-          #     type:
-          #       input: last_name
-          #       from: value
-          - model: attribute
-            fields:
-              text:
-                input: hpdid
-                from: claim
-              # type:
-              #   input: hpdid
-              #   from: value
+        # mapping:
+        #   # TODO model: name vs attribute?
+        #   - model: attribute
+        #     fields:
+        #       type:
+        #         input: hpdid
+        #         from: value
+        #       value:
+        #         input: hpdid
+        #         from: claim
 
 verifiers:
   bctob:
@@ -90,3 +82,6 @@ proof_requests:
           version: '1.0.7'
         attributes:
           - hpdid
+          # - legal_name
+          # - first_name
+          # - last_name
