@@ -32,19 +32,23 @@ forms:
         type: text
         required: true
 
+      - name: legal_name
+        label: Legal Name
+        type: text
+        required: true
+
+      # TODO what fields should be included?
+      # - name: address
+      #   label: Mailing Address
+      #   type: address
+      #   required: true
+
       - name: gpid
         label: General Practitioner ID
         type: text
         required: true
 
-      # TODO what fields should be included?
-      # - name: legal_name
-      #   label: General Practitioner ID
-      #   type: text
-      #   required: true
-
     mapping:
-      # TODO what fields should be included?
       attributes:
         - name: registration_date
           from: helper

@@ -10,8 +10,6 @@
   version: '1.0.1'
   attributes:
     - hpdid
+    - legal_name
     - gpid
     # TODO what attributes should be included?
-    # - legal_name
-    # - first_name
-    # - last_name

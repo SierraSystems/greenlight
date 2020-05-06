@@ -43,19 +43,11 @@ issuers:
           - model: name
             fields:
               text:
-                input: first_name
+                input: legal_name
                 from: claim
               type:
-                input: first_name
+                input: legal_name
                 from: value
-          - model: attribute
-            fields:
-              type:
-                input: last_name
-                from: value
-              value:
-                input: last_name
-                from: claim
           - model: attribute
             fields:
               type:

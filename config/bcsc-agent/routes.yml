@@ -21,15 +21,20 @@ forms:
         type: text
         required: true
 
-      - name: first_name
-        label: First Name
+      - name: legal_name
+        label: Legal Name
         type: text
         required: true
 
-      - name: last_name
-        label: Last Name
-        type: text
-        required: true
+      # - name: first_name
+      #   label: First Name
+      #   type: text
+      #   required: true
+
+      # - name: last_name
+      #   label: Last Name
+      #   type: text
+      #   required: true
 
     mapping:
       attributes:
